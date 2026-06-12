@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KTX Bags – Premium Bag Manufacturing</title>
+  <meta name="description" content="KTX Bags is a leading bag manufacturer offering low MOQ, fast delivery, custom OEM branding, sustainable materials, and factory-direct pricing across backpacks, totes, duffels, handbags, laptop bags, travel bags, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ───────────────── RESET & BASE ───────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0F172A;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ───────────────── VARIABLES ───────────────── */
+    :root {
+      --blue: #2563EB;
+      --blue-dark: #1D4ED8;
+      --blue-light: #EFF6FF;
+      --blue-mid: #DBEAFE;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-400: #94A3B8;
+      --gray-600: #475569;
+      --gray-800: #1E293B;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(15,23,42,.08);
+      --shadow-lg: 0 12px 40px rgba(15,23,42,.12);
+    }
+
+    /* ───────────────── UTILITIES ───────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--gray-50); }
+    .tag {
+      display: inline-block;
+      background: var(--blue-mid);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--gray-800);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 560px;
+      margin-bottom: 56px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all .2s;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(37,99,235,.3); }
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255,255,255,.5);
+      color: #fff;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+    .btn-outline-dark {
+      background: transparent;
+      border-color: var(--gray-200);
+      color: var(--gray-800);
+    }
+    .btn-outline-dark:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* ───────────────── NAVBAR ───────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gray-800);
+    }
+    .logo-icon {
+      width: 38px; height: 38px;
+      background: var(--blue);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-icon svg { width: 22px; height: 22px; fill: #fff; }
+    .logo span { color: var(--blue); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-600);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .hamburger { display: none; cursor: pointer; }
+
+    /* ───────────────── HERO ───────────────── */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #1D4ED8 100%);
+      color: #fff;
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1600&q=60') center/cover no-repeat;
+      opacity: .12;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #93C5FD;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #60A5FA; }
+    .hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #CBD5E1;
+      margin-bottom: 36px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 40px;
+    }
+    .hero-pill {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      color: #E2E8F0;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-pill::before { content: '✓'; color: #34D399; font-weight: 700; }
+    .hero-image {
+      position: relative;
+    }
+    .hero-img-main {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.4);
+      object-fit: cover;
+      height: 460px;
+    }
+    .hero-stat-card {
+      position: absolute;
+      background: #fff;
+      color: var(--gray-800);
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: 0 12px 32px rgba(0,0,0,.2);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .hero-stat-card .num { font-size: 22px; font-weight: 800; color: var(--blue); display: block; }
+    .hero-stat-card.card-a { bottom: 24px; left: -20px; }
+    .hero-stat-card.card-b { top: 24px; right: -20px; }
+
+    /* ───────────────── LOGOS / TRUST BAR ───────────────── */
+    .trust-bar {
+      border-bottom: 1px solid var(--gray-200);
+      padding: 24px 0;
+      background: #fff;
+    }
+    .trust-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gray-600);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .trust-item svg { width: 20px; height: 20px; color: var(--blue); }
+
+    /* ───────────────── VALUE ADDS ───────────────── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: all .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .value-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--blue-light), transparent);
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .value-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--blue); }
+    .value-card:hover::after { opacity: 1; }
+    .value-icon {
+      width: 52px; height: 52px;
+      background: var(--blue-light);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      position: relative; z-index: 1;
+      transition: background .25s;
+    }
+    .value-card:hover .value-icon { background: var(--blue); }
+    .value-icon svg { width: 26px; height: 26px; stroke: var(--blue); transition: stroke .25s; }
+    .value-card:hover .value-icon svg { stroke: #fff; }
+    .value-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative; z-index: 1;
+    }
+    .value-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.65;
+      position: relative; z-index: 1;
+    }
+    .value-highlight {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--blue-mid);
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 12px;
+      position: relative; z-index: 1;
+    }
+
+    /* ───────────────── PRODUCTS ───────────────── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .product-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all .25s;
+      background: #fff;
+    }
+    .product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--blue); }
+    .product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+    .product-card:hover .product-img { transform: scale(1.05); }
+    .product-img-wrap { overflow: hidden; }
+    .product-info {
+      padding: 18px 20px 20px;
+    }
+    .product-info h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .product-info p {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: gap .2s;
+    }
+    .product-card:hover .product-link { gap: 8px; }
+
+    /* ───────────────── STATS ───────────────── */
+    .stats-section {
+      background: linear-gradient(135deg, #1D4ED8, #2563EB);
+      color: #fff;
+      padding: 72px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 48px;
+      font-weight: 900;
+      display: block;
+    }
+    .stat-label {
+      font-size: 15px;
+      color: #BFDBFE;
+      margin-top: 4px;
+    }
+    .stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,.2);
+      align-self: stretch;
+    }
+
+    /* ───────────────── PROCESS ───────────────── */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-grid::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: var(--blue-mid);
+      z-index: 0;
+    }
+    .process-step {
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 56px; height: 56px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 0 8px var(--blue-mid);
+    }
+    .process-step h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { font-size: 13px; color: var(--gray-600); }
+
+    /* ───────────────── WHY US ───────────────── */
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .why-img-wrap {
+      position: relative;
+    }
+    .why-img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+    .why-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 14px;
+      padding: 20px 24px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(37,99,235,.4);
+    }
+    .why-badge .big { font-size: 36px; font-weight: 900; display: block; }
+    .why-badge .small { font-size: 13px; opacity: .85; }
+    .why-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+    .why-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .why-check {
+      width: 28px; height: 28px;
+      background: var(--blue-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-check svg { width: 14px; height: 14px; stroke: var(--blue); }
+    .why-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 3px; }
+    .why-item p { font-size: 13px; color: var(--gray-600); }
+
+    /* ───────────────── MATERIALS ───────────────── */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+    .material-chip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--gray-200);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-600);
+      text-align: center;
+      background: #fff;
+      transition: all .2s;
+    }
+    .material-chip:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+    .material-chip svg { width: 18px; height: 18px; stroke: currentColor; }
+
+    /* ───────────────── CONTACT ───────────────── */
+    .contact-section {
+      background: linear-gradient(135deg, #0F172A, #1E3A5F);
+      color: #fff;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .contact-inner { max-width: 640px; margin: 0 auto; }
+    .contact-inner h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 16px; }
+    .contact-inner p { color: #94A3B8; font-size: 17px; margin-bottom: 48px; line-height: 1.7; }
+    .contact-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .2s;
+      min-width: 220px;
+      justify-content: center;
+    }
+    .contact-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .contact-btn-wa {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(37,211,102,.3);
+    }
+    .contact-btn-wa:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37,211,102,.45); }
+    .contact-btn-email {
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,.2);
+    }
+    .contact-btn-email:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.4); transform: translateY(-2px); }
+    .contact-note { margin-top: 28px; font-size: 13px; color: #475569; }
+
+    /* ───────────────── FOOTER ───────────────── */
+    footer {
+      background: #0F172A;
+      color: #64748B;
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo { font-size: 18px; font-weight: 800; color: #fff; }
+    .footer-logo span { color: #60A5FA; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: 14px; transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    footer p { font-size: 13px; }
+
+    /* ───────────────── FLOATING WHATSAPP ───────────────── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,.4);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,.5); }
+    .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+    .wa-tooltip {
+      position: absolute;
+      right: 66px;
+      background: #1E293B;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 13px;
+      border-radius: 8px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+    .whatsapp-float:hover .wa-tooltip { opacity: 1; }
+
+    /* ───────────────── RESPONSIVE ───────────────── */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .stat-divider { display: none; }
+      .materials-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .hero-inner, .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-image { display: none; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .process-grid::before { display: none; }
+      .nav-links, .nav-cta { display: none; }
+      .contact-btns { flex-direction: column; align-items: center; }
+      .hamburger { display: block; }
+      .why-badge { position: static; margin-top: 20px; display: inline-block; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-bar-inner { gap: 20px; }
+      .materials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ──────────── NAVBAR ──────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 2h12a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2zM4 9h16v11a2 2 0 01-2 2H6a2 2 0 01-2-2V9z"/>
+          </svg>
+        </div>
+        KTX<span>Bags</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#why-us">Why KTX</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Get a Quote →</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ──────────── HERO ──────────── -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Trusted Bag Manufacturer
+        </div>
+        <h1>Premium Bags, <span>Built to<br/>Your Vision</span></h1>
+        <p>From backpacks to handbags, KTX Bags delivers high-quality, custom-branded bags with low minimum orders and industry-leading turnaround times.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Request a Quote →</a>
+          <a href="#products" class="btn btn-outline">View Products</a>
+        </div>
+        <div class="hero-pills">
+          <div class="hero-pill">Low MOQ from 50 pcs</div>
+          <div class="hero-pill">15–20 Day Production</div>
+          <div class="hero-pill">Custom OEM / Branding</div>
+          <div class="hero-pill">Eco-Friendly Options</div>
+          <div class="hero-pill">Factory-Direct Pricing</div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img class="hero-img-main"
+          src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
+          alt="KTX Bags – Premium Bag Manufacturing" />
+        <div class="hero-stat-card card-a">
+          <span class="num">50+</span>
+          Minimum Order Qty
+        </div>
+        <div class="hero-stat-card card-b">
+          <span class="num">15 Days</span>
+          Avg. Production Time
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── TRUST BAR ──────────── -->
+  <div class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        ISO Quality Standards
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        15–20 Day Turnaround
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Global Shipping
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        500+ Satisfied Clients
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        8+ Product Categories
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────────── VALUE ADDS ──────────── -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="tag">Why Choose KTX</div>
+      <h2 class="section-title">Everything your brand needs,<br/>right from the factory</h2>
+      <p class="section-sub">We've built our operations around the real pain points of bag buyers — high MOQs, long waits, inconsistent quality. Here's how we solve them.</p>
+      <div class="values-grid">
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Low Minimum Order Qty</h3>
+          <p>Start small and scale. Our flexible production model allows minimum orders from as low as 50 pieces — ideal for startups, boutiques, and brands testing new products.</p>
+          <span class="value-highlight">From 50 pieces</span>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Speed matters. Our streamlined manufacturing process ensures a 15–20 day production cycle with express shipping options to get your products to market faster.</p>
+          <span class="value-highlight">15–20 Day Production</span>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Custom OEM Branding</h3>
+          <p>Your brand, your vision. We offer full OEM services — custom logos, labels, hardware, stitching colors, lining prints, packaging, and more. Every detail is yours.</p>
+          <span class="value-highlight">100% Custom</span>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 22l1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="M15 6l3.5-3.5a2.12 2.12 0 013 3L18 9l.5.5a2.12 2.12 0 010 3L14 17l-.5-.5-2 2H9l-1 1H5"/>
+            </svg>
+          </div>
+          <h3>Sustainable Materials</h3>
+          <p>Go green without compromise. We source recycled PET, organic cotton, jute, and other eco-certified materials to help your brand meet sustainability goals.</p>
+          <span class="value-highlight">Eco-Certified Options</span>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Strict Quality Assurance</h3>
+          <p>Every bag passes our multi-point inspection — stitching tension, zipper pull force, colour fastness, and load bearing — before it leaves our facility.</p>
+          <span class="value-highlight">Multi-Point QC</span>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <h3>Competitive Factory Pricing</h3>
+          <p>Skip the middleman. Direct from factory to your door, our prices are structured to give you the best margin whether you're ordering 100 or 100,000 pieces.</p>
+          <span class="value-highlight">Factory-Direct Rates</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── PRODUCTS ──────────── -->
+  <section class="section section-alt" id="products">
+    <div class="container">
+      <div class="tag">Our Products</div>
+      <h2 class="section-title">Every bag category, one manufacturer</h2>
+      <p class="section-sub">From everyday essentials to speciality travel and tech accessories — we manufacture the full range.</p>
+      <div class="products-grid">
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=75"
+              alt="Backpacks" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Backpacks</h3>
+            <p>School, hiking, travel, tactical & fashion — all customizable.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=75"
+              alt="Tote & Shopping Bags" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Tote &amp; Shopping Bags</h3>
+            <p>Canvas, cotton, jute &amp; non-woven totes for retail &amp; gifting.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=75"
+              alt="Duffel & Gym Bags" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Duffel &amp; Gym Bags</h3>
+            <p>Durable sports &amp; travel duffels in multiple sizes and fabrics.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=75"
+              alt="Handbags & Purses" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Handbags &amp; Purses</h3>
+            <p>Fashion-forward handbags, crossbody &amp; clutch designs.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=75"
+              alt="Laptop Bags" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Laptop Bags</h3>
+            <p>Professional carry-ons &amp; briefcases for the modern workforce.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&q=75"
+              alt="Laptop Sleeves" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Laptop Sleeves</h3>
+            <p>Slim protective sleeves with custom prints, sizes &amp; padding.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?w=600&q=75"
+              alt="Travel Bags" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Travel Bags</h3>
+            <p>Wheeled luggage, cabin bags &amp; weekenders built for the road.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img class="product-img"
+              src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=600&q=75"
+              alt="Jholas / Shoulder Bags" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <h3>Jholas &amp; Shoulder Bags</h3>
+            <p>Traditional Indian jhola bags &amp; boho shoulder slings in cotton &amp; jute.</p>
+            <a href="#contact" class="product-link">Get Quote <span>→</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── STATS ──────────── -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <span class="stat-num">500+</span>
+          <div class="stat-label">Clients Served Globally</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <span class="stat-num">50</span>
+          <div class="stat-label">Minimum Order Quantity</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <span class="stat-num">15</span>
+          <div class="stat-label">Days Avg. Production</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <span class="stat-num">8+</span>
+          <div class="stat-label">Bag Categories</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── WHY KTX ──────────── -->
+  <section class="section">
+    <div class="container why-inner">
+      <div class="why-img-wrap">
+        <img class="why-img"
+          src="https://images.unsplash.com/photo-1565084888279-aca607bb0535?w=800&q=75"
+          alt="KTX Bags Manufacturing Facility" loading="lazy" />
+        <div class="why-badge">
+          <span class="big">100%</span>
+          <span class="small">Custom OEM Ready</span>
+        </div>
+      </div>
+      <div>
+        <div class="tag">About KTX Bags</div>
+        <h2 class="section-title">Your reliable partner for custom bag manufacturing</h2>
+        <p style="color:var(--gray-600);font-size:15px;line-height:1.7;margin-bottom:28px;">
+          KTX Bags is a full-service bag manufacturer dedicated to helping brands, retailers, and entrepreneurs bring their product visions to life — without the headaches of high MOQs, long lead times, or inconsistent quality.
+        </p>
+        <ul class="why-list">
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>End-to-End Manufacturing</h4>
+              <p>Design consultation, sampling, bulk production, QC, and shipping — all under one roof.</p>
+            </div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Sample Before You Commit</h4>
+              <p>We provide pre-production samples so you can approve every detail before bulk manufacturing begins.</p>
+            </div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Wide Material Selection</h4>
+              <p>800D polyester, canvas, genuine leather, vegan leather, recycled PET, jute, organic cotton &amp; more.</p>
+            </div>
+          </li>
+          <li class="why-item">
+            <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Dedicated Account Manager</h4>
+              <p>Every client gets a dedicated point of contact for real-time updates, changes, and support throughout production.</p>
+            </div>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Start Your Order →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── MATERIALS ──────────── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="tag" style="display:inline-block;">Materials</div>
+        <h2 class="section-title">Premium fabrics &amp; materials</h2>
+        <p class="section-sub" style="margin:0 auto;">We work with a curated selection of materials to match any use case, budget, or sustainability requirement.</p>
+      </div>
+      <div class="materials-grid">
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          800D Polyester
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+          Canvas
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Genuine Leather
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Vegan Leather
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22l1-1h3l9-9"/><path d="M3 21v-3l9-9"/></svg>
+          Recycled PET
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          Organic Cotton
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3z"/></svg>
+          Jute / Hessian
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          Neoprene
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-1.2 5.4-5 9-9 10 0 5 3.8 8.5 9 9 5.2-.5 9-4 9-9-4-1-7.8-4.6-9-10z"/></svg>
+          Cordura® Nylon
+        </div>
+        <div class="material-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+          Non-Woven PP
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── PROCESS ──────────── -->
+  <section class="section" id="process">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:64px;">
+        <div class="tag" style="display:inline-block;">How It Works</div>
+        <h2 class="section-title">From idea to doorstep in 4 steps</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h3>Share Your Brief</h3>
+          <p>Tell us the bag type, quantity, size, materials, and branding requirements via email or WhatsApp.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h3>Sample &amp; Approve</h3>
+          <p>We create a pre-production sample for your approval — tweak until it's perfect.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h3>Bulk Production</h3>
+          <p>Once approved, our team begins bulk manufacturing with strict QC at every stage.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h3>Ship &amp; Deliver</h3>
+          <p>Your order is packed, inspected, and shipped worldwide — on time, every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── CONTACT ──────────── -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="tag" style="background:rgba(255,255,255,.1);color:#93C5FD;display:inline-block;">Get In Touch</div>
+        <h2>Let's build your next bag collection</h2>
+        <p>Tell us what you need — drop us a message on WhatsApp or send an email and we'll get back within 24 hours.</p>
+        <div class="contact-btns">
+          <a href="https://wa.me/918090173163" class="contact-btn contact-btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="mailto:bagktx@gmail.com" class="contact-btn contact-btn-email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Send an Email
+          </a>
+        </div>
+        <p class="contact-note">bagktx@gmail.com &nbsp;·&nbsp; +91 80901 73163 &nbsp;·&nbsp; Response within 24 hrs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────── FOOTER ──────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">KTX<span>Bags</span></div>
+      <ul class="footer-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#why-us">Why KTX</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="mailto:bagktx@gmail.com">bagktx@gmail.com</a></li>
+      </ul>
+      <p>© 2026 KTX Bags. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ──────────── FLOATING WHATSAPP ──────────── -->
+  <a class="whatsapp-float" href="https://wa.me/918090173163" target="_blank" rel="noopener" title="Chat on WhatsApp">
+    <div class="wa-tooltip">Chat on WhatsApp</div>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu() {
+      const links = document.querySelector('.nav-links');
+      const cta = document.querySelector('.nav-cta');
+      if (links.style.display === 'flex') {
+        links.style.display = '';
+        cta.style.display = '';
+      } else {
+        links.style.display = 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '70px';
+        links.style.left = '0';
+        links.style.right = '0';
+        links.style.background = '#fff';
+        links.style.padding = '20px 24px';
+        links.style.borderBottom = '1px solid #E2E8F0';
+        links.style.gap = '16px';
+        cta.style.display = 'flex';
+        cta.style.position = 'absolute';
+        cta.style.top = '180px';
+        cta.style.left = '24px';
+      }
+    }
+
+    // Smooth reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.value-card, .product-card, .process-step, .material-chip').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
